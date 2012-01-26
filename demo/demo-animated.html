@@ -8,7 +8,7 @@
   
 <div id="container"></div>
 <!-- /container -->  
-  
+<script src="../zepto.min.js"></script>  
 <script src="raphael-min.js"></script>
 <script src="../us-map-svg.js"></script>
 <script>
@@ -39,13 +39,13 @@
         st[0].style.cursor = "pointer";
 
         st[0].onmouseover = function () {
-          st.animate({fill: st.color}, 500);
+	  st.animate({ opacity: .5 }, 500, 'ease-out');
           st.toFront();
           R.safari();
         };
 
         st[0].onmouseout = function () {
-          st.animate({fill: "#d3d3d3"}, 500);
+	  st.animate({ opacity: 1 }, 500, 'ease-out');
           st.toFront();
           R.safari();
         };
